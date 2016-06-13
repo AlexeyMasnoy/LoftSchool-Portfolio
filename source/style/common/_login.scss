@@ -1,0 +1,63 @@
+#main-login {
+	@extend %main-container;
+	  height: 700px;
+	  margin-bottom: -75px;
+	  background: url("/assets/img/photo-bg.jpg") top center no-repeat;
+	  &::after {
+	    content: '';
+	    display: block;
+	  }
+	.box {
+    @extend %selfbox;
+
+      .selfbox-login {
+        .selfbox-login-text {
+          font-family: 'BernierRegular', Arial, sans-serif;
+          font-size: 35px;
+          text-align: center;
+          margin: 35px 0;
+          }
+          .login-form-man {
+            margin: 0 30px;
+            width: 300px;
+
+            .login-input-log, .login-input-pas {
+              width: 100%;
+              height: 35px;
+              padding-left: 15px;
+              margin-bottom: 20px;
+              background-color: #fff;
+              &::before {
+                content: 'rgfg';
+                width: 35px;
+                height: auto;
+                background-color: red;
+              }
+            }
+          }
+        
+        .login-form-human {
+          text-align: center;
+          margin-bottom: 20px;
+            .span-text {
+              font-family: 'Roboto-Regilar', Arial, sans-serif;
+              font-size: 16px;
+            }
+          }
+        .login-form-text {
+          text-align: center;
+          font-family: 'Roboto-Regilar', Arial, sans-serif;
+          font-size: 16px;
+          margin-bottom: 15px;
+          }
+        .login-input-not {
+          text-align: center;
+
+        }
+      }
+      .selfbox-nav {
+        @extend %box-nav;
+      } 
+	}
+
+}

@@ -2,7 +2,7 @@ body {
   height: 100%;
 }
 
-.main {
+#main-welcome {
   @extend %main-container;
   height: 700px;
   margin-bottom: -75px;
@@ -13,41 +13,35 @@ body {
   }
 }
 
-a.login {
-  display: block;
-  float: right;
-  height: 45px;
-  width: 180px;
-  margin: 24px;
-  border-radius: 7px;
-  border: 2px solid #fff;
-  position: relative;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-  line-height: 45px;
-  font-family: 'Roboto-Medium', Arial, sans-serif;
-  font-size: 16px;
-  &:hover{
-    color: #00bfa5;
-    background-color: #fff;
+  .login-box {
+    position: relative;
+    width: 180px;
+    height: 45px;
+    float: right;
+    margin: 24px;
+    a.login {
+      display: block; 
+      height: auto;
+      width: auto;      border-radius: 7px;
+      border: 2px solid #fff;
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      line-height: 45px;
+      font-family: 'Roboto-Medium', Arial, sans-serif;
+      font-size: 16px;
+      &:hover{
+        color: #00bfa5;
+        background-color: #fff;
+      }
+    }
   }
-  }
-
 .selfbox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 380px;
-  height: 400px;
-  margin-top: -190px;
-  margin-left: -200px; 
-  background-color: rgba(255, 255, 255, 0.8s);
-  border-radius: 7px;
-  overflow: hidden;
+ @extend %selfbox;
   
   .selfbox-head {
-    margin-bottom: 18px;
+    margin-bottom: 39px;
     position: relative;
     .selfbox-head-img-container {
       margin: 0 auto;
@@ -63,6 +57,7 @@ a.login {
     }
     .selfbox-head-text {
       text-align: center;
+      margin-bottom: 15px;
       .selfbox-h1 {
         margin: 0px;
         margin-bottom: 8px; 
@@ -85,7 +80,7 @@ a.login {
       margin-bottom: 27px;
       .social-item {
         display: inline-block;
-        vertical-align: text-bottom;
+        vertical-align: middle;
         margin: 0 10px;
         .social-link { 
 
@@ -138,7 +133,7 @@ a.login {
 
 .footer-welcome {
   @extend %footer;
-  height: 75px;
+  max-height: 75px;
   .footer-text {
     color: #fff;
     text-align: center;

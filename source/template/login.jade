@@ -1,0 +1,33 @@
+doctype html
+html
+  include common/_head
+  body
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+  include common/_mixin
+
+#main-login
+  .box
+    .selfbox-login
+      h1.selfbox-login-text Авторизуйтесь
+      form.login-form-man
+        input(type="text", placeholder="Логин").login-input-log
+        input(type="text", placeholder="Пароль").login-input-pas
+      form.login-form-human
+        input.login-input-chek(type="checkbox")
+        span.span-text Я человек
+      h5.login-form-text Вы точно не робот?
+      form.login-input-not
+        input.login-input-yes(type="radio" value="yes") 
+         span.yes-text Да
+        input.login-input-no(type="radio" value="no") 
+         span.no-text Не уверен
+    .selfbox-nav
+      ul.selfbox-nav-items
+        li.selfbox-nav-item
+          a.selfbox-nav-link(href="index.html") На главную
+        li.selfbox-nav-item
+           a.selfbox-nav-link(href="") Войти
+footer.footer-welcome
+      p.footer-text Алексей Масной | создано с любовью в LoftSchool | 2016

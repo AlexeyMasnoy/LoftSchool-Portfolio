@@ -48,7 +48,7 @@ table {
 }
 
 html {
-	height: 100%;
+	min-height: 100%;
 }
 
 // %social-icon {
@@ -70,6 +70,50 @@ html {
 %footer {
   position: relative;
   clear: both;
+}
+
+%selfbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  height: 400px;
+  margin-top: -190px;
+  margin-left: -200px; 
+  background-color: rgba(255, 255, 255, 0.8s);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+%box-nav {
+    width: 380px;
+    .selfbox-nav-items {
+      
+      .selfbox-nav-item {
+        
+        display: inline-block;
+        border-right: 2px solid #73cac3;
+        margin-right: -5px;
+        &:last-child {
+          border: none;
+        }
+
+        .selfbox-nav-link {
+          background: rgba(9, 176, 157, 0.6);
+          display: block;
+          padding: 0 32px;
+          line-height: 45px;
+          height: 45px;
+          text-decoration: none;
+          color: #fff;
+          font-size: 16px;
+          font-family: 'Roboto-Medium', Arial, sans-serif;
+          &:hover {
+            background: #26a69a;
+          }
+        }
+      }
+    }
 }
 
 %selfbox-head {
@@ -110,3 +154,4 @@ html {
 @import 'common/sprite';
 @import 'common/welcome';
 @import 'common/about';
+@import 'common/login';
