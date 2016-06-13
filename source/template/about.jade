@@ -5,6 +5,7 @@ html
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
+  include common/_mixin
 
   .main-about
     section.about-head-section
@@ -12,13 +13,16 @@ html
         ul.header-about-items
           li.header-about-item
             a.header-about-link(href="")
-              .social-icon.svg-vk.svg-vk-dims
+              .social-icon
+                  +use("vk","svg-vk-dims")
           li.header-about-item
             a.header-about-link(href="")
-              .social-icon.svg-github.svg-github-dims
+              .social-icon
+                  +use("github","svg-github-dims")
           li.header-about-item
             a.header-about-link(href="")
-              .social-icon.svg-in.svg-in-dims
+              .social-icon
+                  +use("in","svg-in-dims")
         nav.nav
           a.nav-link(href="").svg-hamburger.svg-hamburger-dims
       .selfbox-head-about 
@@ -33,5 +37,5 @@ html
       img.about-me-left-image
       h1.about-me-left-myself Кто я
       p.about-me-left-myself-description Я начинающий веб разработчик из Санкт-Петербурга. Мне 36 лет. Я учусь на курсах Loftblog. Создаю этот сайтв в рамках проекта. Это первый проект сайта портфолио.
-    .about-me-right.svg-right.svg-right-dims
+    .svg-portf_arrow_up-dims.svg-portf_arrow_up
   footer.footer-about

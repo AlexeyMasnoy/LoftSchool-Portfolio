@@ -12,13 +12,16 @@
           ul.socials
             li.social-item
               a.social-link(href="")
-                .social-icon.svg-vk.svg-vk-dims
+                .social-icon
+                  +use("vk","svg-vk-dims")
             li.social-item
               a.social-link(href="")
-                .social-icon.svg-github.svg-github-dims
+                .social-icon
+                  +use("github","svg-github-dims")
             li.social-item
               a.social-link(href="")
-                .social-icon.svg-in.svg-in-dims
+                .social-icon
+                  +use("in","svg-in-dims")
         .selfbox-nav
           ul.selfbox-nav-items
             li.selfbox-nav-item
@@ -28,4 +31,4 @@
             li.selfbox-nav-item
               a.selfbox-nav-link(href="") Блог
     footer.footer-welcome
-      p Алексей Масной | создано с любовью в LoftSchool | 2016
+      p.footer-text Алексей Масной | создано с любовью в LoftSchool | 2016

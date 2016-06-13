@@ -90,8 +90,10 @@ a.login {
         .social-link { 
 
           .social-icon {
-
-           
+            fill: #73d4c9;
+            &:hover {
+              fill: #00bfa5;
+            }
           }
         }
       }
@@ -126,7 +128,6 @@ a.login {
           font-family: 'Roboto-Medium', Arial, sans-serif;
           &:hover {
             background: #26a69a;
-            // opacity: 0.1;
           }
         }
       }
@@ -138,11 +139,12 @@ a.login {
 .footer-welcome {
   @extend %footer;
   height: 75px;
-  color: #fff;
-  text-align: center;
-  line-height: 75px;
-  font-size: 16px;
-  font-family: 'Roboto-Light', Arial, sans-serif;
+  .footer-text {
+    color: #fff;
+    text-align: center;
+    line-height: 75px;
+    font-size: 16px;
+    font-family: 'Roboto-Light', Arial, sans-serif;
+  }
 }
-
 

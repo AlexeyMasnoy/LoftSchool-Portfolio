@@ -22,6 +22,14 @@ footer.footer-about {
   		.header-about-item {
   			margin-left: 20px;
   			display: inline-block;
+        .header-about-link {
+          .social-icon {
+            fill: #c2d6d6;
+            &:hover {
+              fill: #fff;
+            }
+          }
+        }
   		}
   	}
   	.nav { 
