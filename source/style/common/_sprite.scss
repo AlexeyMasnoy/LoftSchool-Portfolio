@@ -1,0 +1,375 @@
+%svg-common {
+	background: url("../img/sprite.svg") no-repeat;
+}
+
+.svg-about_bg_left {
+	@extend %svg-common;
+	background-position: 64.63043289528262% 46.18681296570781%;
+}
+
+.svg-about_bg_left-dims {
+	width: 910.01px;
+	height: 1023.99px;
+}
+
+.svg-about_bg_right {
+	@extend %svg-common;
+	background-position: 93.9009605520843% 46.06323703520378%;
+}
+
+.svg-about_bg_right-dims {
+	width: 910.33px;
+	height: 1019.99px;
+}
+
+.svg-about_header {
+	@extend %svg-common;
+	background-position: 57.234953756435374% 73.51774584041621%;
+}
+
+.svg-about_header-dims {
+	width: 508.16px;
+	height: 185.44px;
+}
+
+.svg-arrow_down {
+	@extend %svg-common;
+	background-position: 97.57203587614997% 19.51350830105591%;
+}
+
+.svg-arrow_down-dims {
+	width: 35.18px;
+	height: 26.16px;
+}
+
+.svg-bg {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-bg-dims {
+	width: 2010px;
+	height: 364.69px;
+}
+
+.svg-blog_header {
+	@extend %svg-common;
+	background-position: 16.45175993376144% 82.91546763372936%;
+}
+
+.svg-blog_header-dims {
+	width: 312.19px;
+	height: 218.01px;
+}
+
+.svg-check {
+	@extend %svg-common;
+	background-position: 98.28174475930896% 19.495961590956533%;
+}
+
+.svg-check-dims {
+	width: 28.16px;
+	height: 23.92px;
+}
+
+.svg-envelope {
+	@extend %svg-common;
+	background-position: 88.36581836965489% 24.10781042730233%;
+}
+
+.svg-envelope-dims {
+	width: 32.01px;
+	height: 27.3px;
+}
+
+.svg-envelope2 {
+	@extend %svg-common;
+	background-position: 93.50438926511161% 21.6880105761851%;
+}
+
+.svg-envelope2-dims {
+	width: 33px;
+	height: 26.39px;
+}
+
+.svg-envelope_n {
+	@extend %svg-common;
+	background-position: 90.92105926860025% 21.940243902439025%;
+}
+
+.svg-envelope_n-dims {
+	width: 55px;
+	height: 55px;
+}
+
+.svg-github {
+	@extend %svg-common;
+	background-position: 96.68850401606424% 19.5594039468385%;
+}
+
+.svg-github-dims {
+	width: 36px;
+	height: 32px;
+}
+
+.svg-github:hover {
+	@extend %svg-common;
+	background-position: 95.78488955823292% 19.5594039468385%;
+}
+
+.svg-github_hover-dims {
+	width: 36px;
+	height: 32px;
+}
+
+.svg-github_round {
+	@extend %svg-common;
+	background-position: 98.67297979797979% 14.854989816700611%;
+}
+
+.svg-github_round-dims {
+	width: 60px;
+	height: 60px;
+}
+
+.svg-hamburger {
+	@extend %svg-common;
+	background-position: 99.93576826196474% 14.764777327935223%;
+}
+
+.svg-hamburger-dims {
+	width: 50px;
+	height: 45px;
+}
+
+.svg-in {
+	@extend %svg-common;
+	background-position: 91.82187656798796% 21.7452438700112%;
+}
+
+.svg-in-dims {
+	width: 34px;
+	height: 32.94px;
+}
+
+.svg-in:hover {
+	@extend %svg-common;
+	background-position: 92.67486201705971% 21.7452438700112%;
+}
+
+.svg-in_hover-dims {
+	width: 34px;
+	height: 32.94px;
+}
+
+.svg-in_round {
+	@extend %svg-common;
+	background-position: 98.67297979797979% 17.2989816700611%;
+}
+
+.svg-in_round-dims {
+	width: 60px;
+	height: 60px;
+}
+
+.svg-link {
+	@extend %svg-common;
+	background-position: 88.74405831309966% 25.49328806413851%;
+}
+
+.svg-link-dims {
+	width: 29.13px;
+	height: 29.13px;
+}
+
+.svg-login {
+	@extend %svg-common;
+	background-position: 94.12291721932199% 21.679560407779626%;
+}
+
+.svg-login-dims {
+	width: 24.14px;
+	height: 25.42px;
+}
+
+.svg-map_marker {
+	@extend %svg-common;
+	background-position: 87.36297983653955% 25.51915758954638%;
+}
+
+.svg-map_marker-dims {
+	width: 25.15px;
+	height: 31.65px;
+}
+
+.svg-phone {
+	@extend %svg-common;
+	background-position: 89.4679214460029% 25.490519439774108%;
+}
+
+.svg-phone-dims {
+	width: 28.86px;
+	height: 28.86px;
+}
+
+.svg-phone2 {
+	@extend %svg-common;
+	background-position: 88.02206580176336% 25.511966345282904%;
+}
+
+.svg-phone2-dims {
+	width: 26.49px;
+	height: 30.95px;
+}
+
+.svg-phone_n {
+	@extend %svg-common;
+	background-position: 89.53392181588903% 21.940243902439025%;
+}
+
+.svg-phone_n-dims {
+	width: 55px;
+	height: 55px;
+}
+
+.svg-portf_arrow_down {
+	@extend %svg-common;
+	background-position: 94.85967645175762% 19.60235069988214%;
+}
+
+.svg-portf_arrow_down-dims {
+	width: 52.74px;
+	height: 37.44px;
+}
+
+.svg-portf_arrow_up {
+	@extend %svg-common;
+	background-position: 93.53029546840891% 19.60235069988214%;
+}
+
+.svg-portf_arrow_up-dims {
+	width: 52.74px;
+	height: 37.44px;
+}
+
+.svg-portfolio_header {
+	@extend %svg-common;
+	background-position: 70.91172724739019% 16.644607127208996%;
+}
+
+.svg-portfolio_header-dims {
+	width: 1185.49px;
+	height: 323.96px;
+	opacity: 0.1;
+}
+
+.svg-skype {
+	@extend %svg-common;
+	background-position: 87.55694932262921% 24.172914147521162%;
+}
+
+.svg-skype-dims {
+	width: 34px;
+	height: 34px;
+}
+
+.svg-skype_n {
+	@extend %svg-common;
+	background-position: 0 99.9769028871391%;
+}
+
+.svg-skype_n-dims {
+	width: 610px;
+	height: 610px;
+}
+
+.svg-sprite {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-sprite-dims {
+	width: 2010px;
+	height: 1904.56px;
+}
+
+.svg-stars1 {
+	@extend %svg-common;
+	background-position: 97.05608478894311% 15.233309524107884%;
+}
+
+.svg-stars1-dims {
+	width: 196.86px;
+	height: 120.97px;
+}
+
+.svg-stars2 {
+	@extend %svg-common;
+	background-position: 83.24840432460597% 22.74942044257113%;
+}
+
+.svg-stars2-dims {
+	width: 181.5px;
+	height: 142.5px;
+}
+
+.svg-stars3 {
+	@extend %svg-common;
+	background-position: 86.43501229853314% 22.66849225315733%;
+}
+
+.svg-stars3-dims {
+	width: 113.03px;
+	height: 134.03px;
+}
+
+.svg-telegram_logo {
+	@extend %svg-common;
+	background-position: 16.17560877301378% 93.66579733552209%;
+}
+
+.svg-telegram_logo-dims {
+	width: 248.89px;
+	height: 248.89px;
+}
+
+.svg-vk {
+	@extend %svg-common;
+	background-position: 99.68492383146692% 18.160441821952826%;
+}
+
+.svg-vk-dims {
+	width: 40.01px;
+	height: 27.12px;
+}
+
+.svg-vk:hover {
+	@extend %svg-common;
+	background-position: 99.68492383146692% 17.070357091178032%;
+}
+
+.svg-vk_hover-dims {
+	width: 40.01px;
+	height: 27.12px;
+}
+
+.svg-vk_round {
+	@extend %svg-common;
+	background-position: 88.13181818181818% 21.984928716904278%;
+}
+
+.svg-vk_round-dims {
+	width: 60px;
+	height: 60px;
+}
+
+.svg-works_header {
+	@extend %svg-common;
+	background-position: 91.17207338297811% 15.58530915058377%;
+}
+
+.svg-works_header-dims {
+	width: 515.1px;
+	height: 175.04px;
+}
+

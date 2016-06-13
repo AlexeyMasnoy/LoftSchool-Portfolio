@@ -1,0 +1,37 @@
+doctype html
+html
+  include common/_head
+  body
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+
+  .main-about
+    section.about-head-section
+      header.header-about
+        ul.header-about-items
+          li.header-about-item
+            a.header-about-link(href="")
+              .social-icon.svg-vk.svg-vk-dims
+          li.header-about-item
+            a.header-about-link(href="")
+              .social-icon.svg-github.svg-github-dims
+          li.header-about-item
+            a.header-about-link(href="")
+              .social-icon.svg-in.svg-in-dims
+        nav.nav
+          a.nav-link(href="").svg-hamburger.svg-hamburger-dims
+      .selfbox-head-about 
+        .selfbox-head-img-container
+          img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="")
+        .selfbox-head-text
+           h1.selfbox-h1 Алексей Масной
+           h4.selfbox-p Личный сайт веб разработчика
+           //- .svg-portfolio_header.svg-portfolio_header-dims
+    .about-me-left.svg-about_bg_left.svg-about_bg_left-dims
+      h1.about-me-left-h1  Обо мне
+      img.about-me-left-image
+      h1.about-me-left-myself Кто я
+      p.about-me-left-myself-description Я начинающий веб разработчик из Санкт-Петербурга. Мне 36 лет. Я учусь на курсах Loftblog. Создаю этот сайтв в рамках проекта. Это первый проект сайта портфолио.
+    .about-me-right.svg-right.svg-right-dims
+  footer.footer-about
