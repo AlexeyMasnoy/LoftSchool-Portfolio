@@ -1,0 +1,29 @@
+.header {
+  height: 35px;
+  	padding: 30px;
+  	&__items {
+		float: left;
+  	}
+  	&__item {
+		margin-left: 20px;
+  		display: inline-block;
+  	}
+  	&__link {
+
+  	}
+  	.social__icon {
+      fill: #c2d6d6;
+       &:hover {
+        fill: #fff;
+        }
+  	}
+    .nav {
+      float: right;
+      .nav__link {
+        display: block;
+        .manu__icon {
+
+        }
+      }
+    }
+}

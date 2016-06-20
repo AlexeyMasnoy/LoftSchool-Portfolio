@@ -1,0 +1,127 @@
+footer.footer-2 {
+	height: 150px;
+	background-color: #555b5e;
+	opacity: 0.9;
+  @include tablet {
+      width: 100%;
+      float: none;
+      height: 240px;
+    }
+}
+
+.footer-2__navigation {
+  height: 74px;
+  border-bottom: 1px solid #666c6e;
+  @include tablet {
+      height: 120px;
+    }
+}
+
+
+
+.footer-2__nav {
+  &-item {
+  display: inline-block;
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+  &-link {
+          // background: rgba(9, 176, 157, 0.6);
+          display: block;
+          // padding: 0 32px;
+          line-height: 75px;
+          text-align: center;
+          height: 75px;
+          text-decoration: none;
+          color: #fff;
+          font-size: 16px;
+          font-family: 'Roboto-Medium', Arial, sans-serif;
+          &:hover {
+            // background: #26a69a;
+          }
+  }
+  @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+}
+
+.footer-2__nav__right {
+  float: right;
+  margin-right: 30px;
+  @include tablet {
+      width: 100%;
+      float: none;
+      line-height: 1;
+    }
+}
+
+.footer-2__nav__left {
+  float: left;
+  margin-left: 30px;
+  @include tablet {
+      width: 100%;
+      float: none;
+      line-height: 1;
+    }
+}
+
+.footer-2 {
+  &__social-item {
+  display: inline-block;
+  margin-left: 10px;
+  &:first-child {
+    margin-left: 0px;
+    margin: 10px 0;
+  }
+  }
+  &__social-icon {
+    
+  }
+  @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+}
+
+
+.footer-2__copyright {
+  margin: 0 30px;
+  @extend %clearfix;
+ 
+}
+
+.copyright {
+    height: 75px;
+
+    &__info {
+    display: block;
+    float: left;
+    line-height: 75px;
+    text-align: center;
+    color: #aaadaf;
+    font-size: 16px;
+    font-family: 'Roboto-Light', Arial, sans-serif;
+     @include tablet {
+      width: 100%;
+      float: none;
+      line-height: 1;
+    }
+  }
+    &__about {
+    display: block;
+    float: right;
+    line-height: 75px;
+    text-align: center;
+    color: #aaadaf;
+    font-size: 16px;
+    font-family: 'Roboto-Light', Arial, sans-serif;  
+     @include tablet {
+      width: 100%;
+      float: none;
+      line-height: 2;
+    }
+    }
+}

@@ -22,13 +22,8 @@
               a.social-link(href="")
                 .social-icon
                   +use("in","svg-in-dims")
-        .selfbox-nav
-          ul.selfbox-nav-items
-            li.selfbox-nav-item
-              a.selfbox-nav-link(href="") Мои работы
-            li.selfbox-nav-item
-              a.selfbox-nav-link(href="about.html") Обо мне
-            li.selfbox-nav-item
-              a.selfbox-nav-link(href="") Блог
-    footer.footer-welcome
-      p.footer-text Алексей Масной | создано с любовью в LoftSchool | 2016
+        
+
+        +nav('selfbox-nav', {'Мои работы':'work.html', 'Обо мне':'about.html','Блог':'blog.html'})
+    footer.footer-1
+      p.copyright © Алексей Масной | создано с любовью в LoftSchool | 2016

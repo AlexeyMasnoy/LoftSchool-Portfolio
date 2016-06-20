@@ -19,15 +19,11 @@ html
         span.span-text Я человек
       h5.login-form-text Вы точно не робот?
       form.login-input-not
-        input.login-input-yes(type="radio" value="yes") 
-         span.yes-text Да
-        input.login-input-no(type="radio" value="no") 
-         span.no-text Не уверен
-    .selfbox-nav
-      ul.selfbox-nav-items
-        li.selfbox-nav-item
-          a.selfbox-nav-link(href="index.html") На главную
-        li.selfbox-nav-item
-           a.selfbox-nav-link(href="") Войти
-footer.footer-welcome
-      p.footer-text Алексей Масной | создано с любовью в LoftSchool | 2016
+        input.login-input-yes(type="radio" value="yes")
+        span.yes-text Да
+        input.login-input-no(type="radio" value="no")
+        span.no-text Не уверен
+
+    +nav('selfbox-nav', {'На главную':'index.html', 'Войти':'log-in.html'})
+footer.footer-1
+      p.copyright © Алексей Масной | создано с любовью в LoftSchool | 2016

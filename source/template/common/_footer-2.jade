@@ -1,0 +1,21 @@
+footer.footer-2
+    .footer-2__navigation
+      .footer-2__nav__left
+        +nav('footer-2__nav', {'Мои работы':'work.html', 'Обо мне':'about.html','Блог':'blog.html', 'Авторизация':'login.html'})
+      .footer-2__nav__right
+          ul.footer-2__socials
+            li.footer-2__social-item
+              a.footer-2__social-link(href="")
+                .footer-2__social-icon
+                  +use("vk_round","svg-vk_round-dims")
+            li.footer-2__social-item
+              a.footer-2__social-link(href="")
+                .footer-2__social-icon
+                  +use("github_round","svg-github_round-dims")
+            li.footer-2__social-item
+              a.footer-2__social-link(href="")
+                .footer-2__social-icon
+                  +use("in_round","svg-in_round-dims")
+    .footer-2__copyright
+      p.copyright__info Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
+      p.copyright__about © Масной Алексей Создано с любовью в LoftSchool | 2016

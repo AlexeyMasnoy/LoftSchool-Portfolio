@@ -3,18 +3,16 @@
 	  height: 700px;
 	  margin-bottom: -75px;
 	  background: url("/assets/img/photo-bg.jpg") top center no-repeat;
-	  &::after {
-	    content: '';
-	    display: block;
+	  &:after {
+	    
+      height: 75px;
 	  }
 	.box {
     @extend %selfbox;
 
       .selfbox-login {
         .selfbox-login-text {
-          font-family: 'BernierRegular', Arial, sans-serif;
-          font-size: 35px;
-          text-align: center;
+          @extend %h1;
           margin: 35px 0;
           }
           .login-form-man {
@@ -52,12 +50,16 @@
           }
         .login-input-not {
           text-align: center;
-
+          margin-bottom: 45px;
         }
       }
       .selfbox-nav {
         @extend %box-nav;
-      } 
+         .selfbox-nav-item {
+          width: 50%;
+         } 
+      }
+
 	}
 
 }

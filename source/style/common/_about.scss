@@ -1,69 +1,102 @@
-.main-about {
+
+// Mian-block
+
+#main-about {
 	@extend %main-container;
-	min-height: 100%;
+  position: relative;
 	margin-bottom: -150px;
-	background: url("/assets/img/photo-bg2.jpg") top center no-repeat;
+  &:after {
+    height: 150px;
+  }
 }
 
-footer.footer-about {
-	@extend %footer;
-	height: 150px;
-	background-color: #555b5e;
-	opacity: 0.9;
-}
+// Footer
 
-.about-head-section {
-  height: 790px;
-	.header-about {
-  	height: 90px;
-  	padding: 30px;
-  	.header-about-items {
-  		float: left;
+// Header
 
-  		.header-about-item {
-  			margin-left: 20px;
-        vertical-align: middle;
-  			display: inline-block;
-        .header-about-link {
-          .social-icon {
-            fill: #c2d6d6;
-            &:hover {
-              fill: #fff;
-            }
-          }
-        }
-  		}
-  	}
-  	.nav { 
-  		float: right;
-  		.nav-link {
-  			display: block;
-  		}
-  	}
-  } 
-  .selfbox-head-about {
-     @extend %selfbox-head;
-     .selfbox-head-text {
-        .selfbox-h1 { 
-          font-size: 28px;
-          color: #fff;
-        }
-        .selfbox-p {
-          color: #fff;
-        }
-      }
-    }
+.head__section {
+  height: 600px;
+  background: url("/assets/img/photo-bg2.jpg") top center no-repeat;
  }
 
+.selfbox-head-about {
+    @extend %selfbox-head;
+    .selfbox-head-text {
+      .selfbox-h1 { 
+        font-size: 35px;
+        color: #fff;
+        }
+      .selfbox-p {
+        font-size: 16px;
+        color: #fff;
+     }
+  }
+}
 
-.about-me-left {
-  position: relative;
-	clear: both;
-  margin-top: -300px;
-	float: left;
-	width: 50%;
-	.about-me-left-h1 {
-    margin-top: 125px;
-		font-size: 63px;
+.about-skill {
+  height: 960px;
+  .container {
+    &__left {
+      position: relative;
+    	float: left;
+    	width: 50%;
+    	.about-skill-h1 {
+        @extend %h1;
+    		font-size: 63px;
+        margin-bottom: 55px;
+        @include titles-dashes(330px);
 	}
+  .img-container {
+    margin: 0 80px;
+      img {
+        width: 100%;
+      }
+  }
+  .about-skill-myself {
+      @extend %h1;
+      font-size: 35px;
+      margin: 40px auto;
+      @include titles-dashes(270px);
+
+      &-description {
+      @extend %roboto-regular-16;
+      margin: 0 80px;
+    }
+  }
+}
+
+    &__right {
+      position: relative;
+      // margin-top: -300px;
+      float: right;
+      width: 50%;
+      .about-skill-h1 {
+        @extend %h1;
+        font-size: 35px;
+        margin-bottom: 40px;
+        @include titles-dashes(340px);
+  }
+  .about-skill-myself-description {
+    @extend %roboto-regular-16;
+    margin: 0 37px;
+  }
+}
+}
+}
+
+.contacts {
+  &__container {
+    height: 970px;
+    background: url("/assets/img/map.jpg") top center no-repeat;
+    position: relative;
+    .contacts-info {
+      @extend %selfbox;
+        &__header {
+          @extend %h1;
+          position: relative;
+          margin: 33px auto;
+          @include titles-dashes(270px);
+        }
+    }
+  }
 }

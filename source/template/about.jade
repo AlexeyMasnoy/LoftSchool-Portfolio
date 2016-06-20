@@ -7,35 +7,40 @@ html
     <![endif]-->
   include common/_mixin
 
-  .main-about
-    section.about-head-section
-      header.header-about
-        ul.header-about-items
-          li.header-about-item
-            a.header-about-link(href="")
-              .social-icon
-                  +use("vk","svg-vk-dims")
-          li.header-about-item
-            a.header-about-link(href="")
-              .social-icon
-                  +use("github","svg-github-dims")
-          li.header-about-item
-            a.header-about-link(href="")
-              .social-icon
-                  +use("in","svg-in-dims")
-        nav.nav
-          a.nav-link(href="").svg-hamburger.svg-hamburger-dims
+  #main-about
+    section.head__section
+      include common/_header
       .selfbox-head-about 
         .selfbox-head-img-container
-          img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="")
+          img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="Алексей")
         .selfbox-head-text
            h1.selfbox-h1 Алексей Масной
            h4.selfbox-p Личный сайт веб разработчика
-           //- .svg-portfolio_header.svg-portfolio_header-dims
-    .about-me-left.svg-about_bg_left.svg-about_bg_left-dims
-      h1.about-me-left-h1  Обо мне
-      img.about-me-left-image
-      h1.about-me-left-myself Кто я
-      p.about-me-left-myself-description Я начинающий веб разработчик из Санкт-Петербурга. Мне 36 лет. Я учусь на курсах Loftblog. Создаю этот сайтв в рамках проекта. Это первый проект сайта портфолио.
-    .svg-portf_arrow_up-dims.svg-portf_arrow_up
-  footer.footer-about
+    section.about-skill
+      .container
+        .container__left
+          .about-skill-h1_container
+            h1.about-skill-h1  Обо мне
+          .img-container
+            img.about-me-left-image(src="../../assets/img/myphoto.jpg", alt="Алексей")
+          h1.about-skill-myself Кто я
+          p.about-skill-myself-description Я начинающий веб разработчик из Санкт-Петербурга. Мне 36 лет. Я учусь на курсах Loftblog. Создаю этот сайтв в рамках проекта. Это первый проект сайта портфолио.
+        .container__right
+          h1.about-skill-h1 Чем я могу быть <br> вам полезен
+          p.about-skill-myself-description Больше всего меня привлекает FRONTEND разработка, но я так же знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .about-skill-items
+            .skill__name
+              figure.chart(data-percent='45')
+                figcaption
+                  span HTML5
+                  svg(width='120', height='120')
+                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+    section.contacts
+      .contacts__container
+        .contacts-info
+          h1.contacts-info__header Контакты
+          +nav('contacts', {'Skype':'skype:my_skype', 'masnoy0alexey@gmal.com':'mailto:masnoy0alexey@gmail.com', '+79111915954':'+89111915954'})
+        .contacts__map
+          <a href=https://maps.yandex.ru/?um=constructor:R5R_raYckLSI6Ycl45ObTEqZiaGZNaWW&source=constructor target=_blank><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=R5R_raYckLSI6Ycl45ObTEqZiaGZNaWW&width=600&height=436&lang=ru_RU&sourceType=constructor" alt="" style="border: 0;" /></a>
+
+  include common/_footer-2

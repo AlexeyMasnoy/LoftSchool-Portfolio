@@ -1,0 +1,31 @@
+@mixin titles-dashes($dash-position) {
+    &:before {
+    content: '';
+    // position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: #c2d2d0;
+    left: $dash-position;
+    top: 47%;
+  }
+  &:after {
+    content: '';
+    // position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: #c2d2d0;
+    right: $dash-position;
+    top: 47%;
+  }
+}
+
+// @mixin clearfix {
+//     &:before,
+//     &:after {
+//         content: '';
+//         display: table;
+//     }
+//     &:after {
+//         clear: both;
+//     }
+// }
