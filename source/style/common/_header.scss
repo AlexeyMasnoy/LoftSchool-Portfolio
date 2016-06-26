@@ -3,10 +3,13 @@
   	padding: 30px;
   	&__items {
 		float: left;
+    text-align: center;
+    align-items: center;
   	}
   	&__item {
 		margin-left: 20px;
-  		display: inline-block;
+  	display: inline-block;
+    
   	}
   	&__link {
 

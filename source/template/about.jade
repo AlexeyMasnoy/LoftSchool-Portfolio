@@ -8,39 +8,58 @@ html
   include common/_mixin
 
   #main-about
-    section.head__section
-      include common/_header
-      .selfbox-head-about 
-        .selfbox-head-img-container
-          img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="Алексей")
-        .selfbox-head-text
-           h1.selfbox-h1 Алексей Масной
-           h4.selfbox-p Личный сайт веб разработчика
+    include common/_mainhead
+
     section.about-skill
       .container
-        .container__left
+        .container__left.container__about
           .about-skill-h1_container
-            h1.about-skill-h1  Обо мне
+            .about__skill__title 
+            +use('about_header','svg-about_header-dims','svg_title')
+            .content__title_big Обо мне
           .img-container
             img.about-me-left-image(src="../../assets/img/myphoto.jpg", alt="Алексей")
           h1.about-skill-myself Кто я
           p.about-skill-myself-description Я начинающий веб разработчик из Санкт-Петербурга. Мне 36 лет. Я учусь на курсах Loftblog. Создаю этот сайтв в рамках проекта. Это первый проект сайта портфолио.
-        .container__right
+        .container__right.container__about
           h1.about-skill-h1 Чем я могу быть <br> вам полезен
           p.about-skill-myself-description Больше всего меня привлекает FRONTEND разработка, но я так же знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-          .about-skill-items
-            .skill__name
-              figure.chart(data-percent='45')
-                figcaption
-                  span HTML5
-                  svg(width='120', height='120')
-                    circle.outer(cx='130', cy='60', r='50', transform='rotate(-90, 95, 95)')
+          .about-skill__icons
+            h5.about-skill__title Frontend
+            ul.about-skill__items
+              li.about-skill__item
+                +svg-circle('circle', 'HTML5', 226)
+              li.about-skill__item
+                +svg-circle('circle', 'CSS3', 200)
+              li.about-skill__item
+                +svg-circle('circle', 'JavaScript&jQuery', 100)
+          .about-skill__icons
+            h5.about-skill__title Backend
+            ul.about-skill__items
+              li.about-skill__item
+                +svg-circle('circle', 'PHP', 50)
+              li.about-skill__item
+                +svg-circle('circle', 'mySQL', 50)
+              li.about-skill__item
+                +svg-circle('circle', 'Node.js&npm', 100)
+              li.about-skill__item
+                +svg-circle('circle', 'Mongo.db', 50)
+          .about-skill__icons
+            h5.about-skill__title WorkFlow
+            ul.about-skill__items
+              li.about-skill__item
+                +svg-circle('circle', 'Git', 150)
+              li.about-skill__item
+                +svg-circle('circle', 'Gulp', 150)
+              li.about-skill__item
+                +svg-circle('circle', 'Bower', 100)
+           
     section.contacts
       .contacts__container
         .contacts-info
           h1.contacts-info__header Контакты
-          +nav('contacts', {'Skype':'skype:my_skype', 'masnoy0alexey@gmal.com':'mailto:masnoy0alexey@gmail.com', '+79111915954':'+89111915954'})
+          +nav('contacts__nav', {'Skype':'skype:my_skype', 'masnoy0alexey@gmal.com':'mailto:masnoy0alexey@gmail.com', '+79111915954':'+89111915954', 'г.Санкт-Петербург, Авангардная 47':'adress'})
         .contacts__map
-          <a href=https://maps.yandex.ru/?um=constructor:R5R_raYckLSI6Ycl45ObTEqZiaGZNaWW&source=constructor target=_blank><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=R5R_raYckLSI6Ycl45ObTEqZiaGZNaWW&width=600&height=436&lang=ru_RU&sourceType=constructor" alt="" style="border: 0;" /></a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d76269.45907347549!2d30.236248575529917!3d59.84565529507137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1466570275785" width="1350" height="830" frameborder="0" style="border:0" scrolling="no" allowfullscreen></iframe>
 
   include common/_footer-2

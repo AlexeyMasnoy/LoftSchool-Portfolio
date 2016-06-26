@@ -1,6 +1,6 @@
 #main-login {
 	@extend %main-container;
-	  height: 700px;
+	  height: 100vh;
 	  margin-bottom: -75px;
 	  background: url("/assets/img/photo-bg.jpg") top center no-repeat;
 	  &:after {

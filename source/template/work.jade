@@ -8,36 +8,36 @@ html
   include common/_mixin
 
   #main-work 
-    section.head__section
-      include common/_header
-      .selfbox-head-about 
-        .selfbox-head-img-container
-          img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="Алексей")
-        .selfbox-head-text
-           h1.selfbox-h1 Алексей Масной
-           h4.selfbox-p Личный сайт веб разработчика
-        .tell-about-me__arrow-down
-          +use()
+    include common/_mainhead
+      
     section.work
-      h1.work__title Мои работы
-      .container
+      .work__title 
+        +use('works_header','svg-works_header-dims','svg_title')
+        .content__title_big Мои работы
+        
+      .tell-about-me__container
         .tell-about-me__container__left
-          h2.container__left-title Сайт школы онлайн образования
-          .container__left-techbox
-            h4.container__left-techbox-title html, css, javascript
-          a(href="http://loftschool.ru").container__left-link Посмотреть сайт
+          .tell-about-me__container__content
+            h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
+            .tell-about-me__container__left-techbox
+              h4.tell-about-me__container__left-techbox-title html, css, javascript
+            a(href="http://loftschool.ru").tell-about-me__container__left-link
+              +use('link','svg-link-dims')
+              .tell-about-me__container__left-text Посмотреть сайт
         .tell-about-me__container__right
           .container__right-works 
-            img(src="../../assets/img/works.jpg", alt="Мои работы")
+            img(src="../../assets/img/work.png", alt="Мои работы")
           .container__right-slides
-            .container__right-slide_1 
-              img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+            .container__left-slide_1 
+              img.container__left-slide_1__img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
             .container__right-slide_2
               img(src="../../assets/img/mockup-2.jpg", alt="Мои работы")
     section.tell-about-me 
-      h1.tell-about-me__title Что обо мне <br>говорят
+      .work__title
+        +use('about_header','svg-about_header-dims','svg_title')
+        .content__title_big Что обо мне <br>говорят
       .container
-        .container__left
+        .work__container-left
           p.tell-about-me__comment Этот парень проходил обучение веб-разработке не где-то а в LoftSchool. 2 меяца только самых тяжелых испытаний и бессонных ночей!
           .tell-about-me__autor
             .about-me__autor__container
@@ -47,7 +47,7 @@ html
               h1.about-me__autor__description-text основатель Loftschool
 
 
-        .container__right
+        .work__container-right
           p.tell-about-me__comment Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах! 
           .tell-about-me__autor
             .about-me__autor__container
@@ -56,13 +56,19 @@ html
               h1.about-me__autor__description-title Зар Захаров
               h1.about-me__autor__description-text главный преподаватель
       .tell-about-me__find-me
-        form.login-form-man
+        .tell-about-me__Blur-bg-wraper
+          .tell-about-me__Blur-bg
+        h1.tell-about-me__find-me__title Связаться со мной
+        form.tell-about-me__form
           input(type="text", placeholder="Имя").login-input-log
           input(type="text", placeholder="Email").login-input-pas
-          input(type="text", placeholder="Ваше сообщение").login-input-pas
-          button.tell-about-me__send Отправить
-          button.tell-about-me__clear Очистить
-      .tell-about-me__arrow-up
+          textarea(type="text", placeholder="Ваше сообщение").login-input-text
+        .tell-about-me__btn-groop
+          button.tell-about-me__btn Отправить
+          button.tell-about-me__btn Очистить
+      .icon__arrow__up
+        a(href="").icon__arrow__link
+          +use('portf_arrow_up', 'svg-portf_arrow_up-dims')
 
 
   include common/_footer-2

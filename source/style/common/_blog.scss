@@ -1,9 +1,9 @@
-$color_blog: #455a64;
 
 $col: 100% / 12;
 
-.head__section {
+.head__section__blog {
   height: 400px;
+  background: url("/assets/img/photo-bg2.jpg") top center no-repeat;
 }
 
 .blog {
@@ -14,8 +14,10 @@ $col: 100% / 12;
       @extend %h1;
       font-size: 63px;
       color: #fff;
-      @include titles-dashes(500px);
+      // @include titles-dashes();
       margin-bottom: 5px;
+      margin: 0 auto;
+      width: 300px;
     }
     &__selfbox-p {
       @extend %roboto-regular-16;
@@ -50,7 +52,7 @@ $col: 100% / 12;
   text-decoration: none;
   font-family: 'Roboto-Bold', Arial, sans-serif;
   font-size: 16px;
-  color: $color_blog;
+  color: $grey;
   line-height: 1.5;
   &:hover {
       color: #00bfa5;
@@ -87,7 +89,7 @@ $col: 100% / 12;
   }
   &__content {
     padding-bottom: 70px;
-    color: $color_blog;
+    color: $grey;
     font-family: 'MyriadPro-Regular';
     font-size: 16px;
     line-height: 1.5;

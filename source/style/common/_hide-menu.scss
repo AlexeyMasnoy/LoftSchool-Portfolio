@@ -1,0 +1,45 @@
+.hide-menu-wrapper {
+  position: relative;
+  z-index: 300;
+  display: none;
+}
+
+.display {
+  display: block;
+}
+.hide-menu {
+  display: block;
+  z-index: 200;
+  position: fixed;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  background-color: rgba(0, 191, 165, 0.85);
+  &__icon-close {
+    z-index: 300;
+    position: fixed;
+    margin: 0;
+    top: 30px;
+    right: 30px;
+  }
+  &__items {
+    margin-top: 150px;
+    text-align: center;
+    text-decoration: none;
+
+  }
+  &__item {
+    @extend %h1;
+    padding: 25px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+}

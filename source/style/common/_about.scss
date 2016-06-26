@@ -2,15 +2,14 @@
 // Mian-block
 
 #main-about {
+  min-height: 100%;
 	@extend %main-container;
   position: relative;
 	margin-bottom: -150px;
   &:after {
-    height: 150px;
+    // height: 150px;
   }
 }
-
-// Footer
 
 // Header
 
@@ -21,6 +20,7 @@
 
 .selfbox-head-about {
     @extend %selfbox-head;
+    margin-top: 70px;
     .selfbox-head-text {
       .selfbox-h1 { 
         font-size: 35px;
@@ -35,6 +35,30 @@
 
 .about-skill {
   height: 960px;
+  @extend %clearfix;
+  &__icons {
+    @extend %roboto-medium-16;
+    font-size: 28px;
+    color: $grey;
+    margin: 0 5px 30px 37px;
+  }
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 110px;
+    border-radius: 50%;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+  
   .container {
     &__left {
       position: relative;
@@ -45,7 +69,7 @@
     		font-size: 63px;
         margin-bottom: 55px;
         @include titles-dashes(330px);
-	}
+	       }
   .img-container {
     margin: 0 80px;
       img {
@@ -60,10 +84,10 @@
 
       &-description {
       @extend %roboto-regular-16;
-      margin: 0 80px;
+      margin: 0 37px 50px 37px;
     }
   }
-}
+
 
     &__right {
       position: relative;
@@ -75,21 +99,29 @@
         font-size: 35px;
         margin-bottom: 40px;
         @include titles-dashes(340px);
-  }
-  .about-skill-myself-description {
-    @extend %roboto-regular-16;
-    margin: 0 37px;
+        }
+  
+    }
   }
 }
-}
+
+.about__skill__title {
+  position: relative;
+  margin-bottom: 40px;
+  @include titles-dashes(340px);
+  }
+
+.container__about {
+  margin: 0;
 }
 
 .contacts {
   &__container {
     height: 970px;
     background: url("/assets/img/map.jpg") top center no-repeat;
-    position: relative;
-    .contacts-info {
+    position: relative; 
+  }
+  &-info {
       @extend %selfbox;
         &__header {
           @extend %h1;
@@ -98,5 +130,46 @@
           @include titles-dashes(270px);
         }
     }
+  &__nav-items {
+    margin-left: 40px;
+  }
+  &__nav-item {
+    margin-bottom: 25px;
   }
 }
+
+/*-------SVG-------*/
+
+.circle {
+  &__svg {
+    width: 110px;
+    height: 110px;
+  }
+  &__disc {
+    fill: none;
+    stroke: #dfdcd5;
+    stroke-width: 20;
+  }
+  &__ring {
+    fill: none;
+    stroke: $green;
+    stroke-width: 20;
+    stroke-dasharray: 200 282.6;
+    transform-origin: 50%;
+    transition: all 1s;
+    transform: rotate(-90deg);
+  }
+  &__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $green;
+    font-size: 12px;
+   }
+ }

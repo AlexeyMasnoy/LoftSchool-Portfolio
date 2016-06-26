@@ -51,6 +51,14 @@ html,body {
 	height: 100%;
 }
 
+html {
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -64,6 +72,11 @@ html,body {
 .clearfix {
   zoom: 1; /* ie 6/7 */
 }
+
+/*-------- variables --------*/
+
+$grey: #455a64;
+$green: rgba(0, 191, 165, 1);
 
 %main-container {
   position: relative;
@@ -161,14 +174,16 @@ html,body {
   font-size: 35px;
   text-align: center;
   color: #373e42;
+
   &:before {
     content: '';
     position: absolute;
     width: 20px;
     height: 5px;
     background-color: #c2d2d0;
-    left: 25%;
-    top: 47%;
+    left: 2rem;
+    top: 50%;
+    display: inline-block;
   }
   &:after {
     content: '';
@@ -176,8 +191,9 @@ html,body {
     width: 20px;
     height: 5px;
     background-color: #c2d2d0;
-    right: 25%;
-    top: 47%;
+    right: 2rem;
+    top: 50%;
+    display: inline-block;
   }
     .bg-icon {
     position: absolute;
@@ -192,6 +208,11 @@ html,body {
 %roboto-bold-16 {
   font-size: 16px;
   font-family: 'Roboto-Bold', Arial, sans-serif;
+ }
+
+ %roboto-medium-16 {
+  font-size: 16px;
+  font-family: 'Roboto-Medium', Arial, sans-serif;
  }
 
 %bernier-regular-30 {
@@ -213,10 +234,13 @@ html,body {
   }
 }
 
+
+
 @import 'common/mixin';
 @import 'common/fonts';
 @import 'common/sprite';
 @import 'common/media';
+@import 'common/hide-menu';
 @import 'common/header';
 @import 'common/footer-2';
 @import 'common/welcome';

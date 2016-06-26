@@ -1,0 +1,13 @@
+section.head__section
+  include _header
+  .header__svg__bg.svg_title
+    +use('portfolio_header', 'svg-portfolio_header-dims')
+  .selfbox-head-about 
+    .selfbox-head-img-container
+      img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="Алексей")
+    .selfbox-head-text
+      h1.selfbox-h1 Алексей Масной
+      h4.selfbox-p Личный сайт веб разработчика
+  .icon__arrow__down
+    a(href="").icon__arrow__link
+      +use('arrow_down', 'svg-arrow_down-dims')

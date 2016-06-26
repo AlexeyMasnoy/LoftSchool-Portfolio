@@ -1,6 +1,6 @@
 - var svg = "assets/img/sprite.svg"
-mixin use(name, c_name)
-  svg(role="img" class="#{c_name}")
+mixin use(name, c_name, modify)
+  svg(role="img" class="#{c_name + ' ' + modify}" )
     use(xlink:href="#{svg}##{name}")
 
 mixin nav (className, navigation)
@@ -11,7 +11,10 @@ mixin nav (className, navigation)
           a(href="#{link}" class="#{className}-link")= nav
             
 
-mixin h1 (text, backgound)
-
+mixin svg-circle(className, text, skill)
+  svg(class="#{className}__svg" viewBox="0 0 110 110" data-lvl="80")
+    circle(class="#{className}__disc" cx="55" cy="55" r="45")
+    circle(class="#{className}__ring" cx="55" cy="55" r="45" style="stroke-dasharray: #{skill}, 282.6;")
+  span(class="#{className}__text") #{text}
 
             
