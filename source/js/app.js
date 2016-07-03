@@ -1,7 +1,1 @@
-(function() {
 'use strict';
-
-})();
-
-
-

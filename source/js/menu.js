@@ -1,4 +1,6 @@
-// Module - Menu
+// ==============================
+// Menu
+// ==============================
 var Menu = (function() {
 
   var menu_wrapper = $('.hide-menu-wrapper');

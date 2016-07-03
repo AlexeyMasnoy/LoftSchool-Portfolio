@@ -1,48 +1,48 @@
 #main-welcome
-      .login-box
-       a.login(href="login.html") Авторизоваться
-        .flip
-          .flip__container
-            .selfbox
-              .selfbox-head
-                .selfbox-head-img-container
-                  img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="")
-                .selfbox-head-text
-                  h1.selfbox-h1 Алексей Масной
-                  h4.selfbox-p Личный сайт веб разработчика
-              .selfbox-body
-                ul.socials
-                  li.social-item
-                    a.social-link(href="")
-                      .social-icon
-                        +use("vk","svg-vk-dims")
-                  li.social-item
-                    a.social-link(href="")
-                      .social-icon
-                        +use("github","svg-github-dims")
-                  li.social-item
-                    a.social-link(href="")
-                      .social-icon
-                        +use("in","svg-in-dims")
+  .login-box
+   a.login(href="") Авторизоваться
+  .flip
+    
+      .selfbox
+        .selfbox-head
+          .selfbox-head-img-container
+            img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="")
+          .selfbox-head-text
+            h1.selfbox-h1 Алексей Масной
+            h4.selfbox-p Личный сайт веб разработчика
+        .selfbox-body
+           ul.socials
+            li.social-item
+              a.social-link(href="")
+                .social-icon
+                  +use("vk","svg-vk-dims")
+            li.social-item
+              a.social-link(href="")
+                .social-icon
+                   +use("github","svg-github-dims")
+            li.social-item
+              a.social-link(href="")
+                .social-icon
+                  +use("in","svg-in-dims")
               
 
-              +nav('selfbox-nav', {'Мои работы':'work.html', 'Обо мне':'about.html','Блог':'blog.html'})
-            .box
-              .selfbox-login
-                h1.selfbox-login-text Авторизуйтесь
-                form.login-form-man
-                  input(type="text", placeholder="Логин").login-input-log
-                  input(type="text", placeholder="Пароль").login-input-pas
-                form.login-form-human
-                  input.login-input-chek(type="checkbox")
-                  span.span-text Я человек
-                h5.login-form-text Вы точно не робот?
-                form.login-input-not
-                  input.login-input-yes(type="radio" value="yes")
-                  span.yes-text Да
-                  input.login-input-no(type="radio" value="no")
-                  span.no-text Не уверен
+        +nav('selfbox-nav', {'Мои работы':'work.html', 'Обо мне':'about.html','Блог':'blog.html'})
+      .box
+        .selfbox-login
+          h1.selfbox-login-text Авторизуйтесь
+          form.login-form-man
+            input(type="text", placeholder="Логин").login-input-log
+            input(type="text", placeholder="Пароль").login-input-pas
+          form.login-form-human
+            input.login-input-chek(type="checkbox")
+            span.span-text Я человек
+          h5.login-form-text Вы точно не робот?
+          form.login-input-not
+            input.login-input-yes(type="radio" value="yes")
+            span.yes-text Да
+            input.login-input-no(type="radio" value="no")
+            span.no-text Не уверен
 
-    +nav('selfbox-nav', {'На главную':'index.html', 'Войти':'log-in.html'})
-    footer.footer-1
-      p.copyright © Алексей Масной | создано с любовью в LoftSchool | 2016
+        +nav('selfbox-nav', {'На главную':'index.html', 'Войти':'log-in.html'})
+footer.footer-1
+  p.copyright © Алексей Масной | создано с любовью в LoftSchool | 2016
