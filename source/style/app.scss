@@ -235,13 +235,14 @@ $green: rgba(0, 191, 165, 1);
 }
 
 
-
+@import 'common/preloader';
 @import 'common/mixin';
 @import 'common/fonts';
 @import 'common/sprite';
 @import 'common/media';
 @import 'common/hide-menu';
 @import 'common/header';
+@import 'common/mainheader';
 @import 'common/footer-2';
 @import 'common/welcome';
 @import 'common/work';

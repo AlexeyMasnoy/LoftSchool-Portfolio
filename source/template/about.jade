@@ -1,11 +1,13 @@
 doctype html
-html
+html(lang="ru-RU")
   include common/_head
   body
+    include common/_mixin
+    include common/_hide-menu
+    include common/_preloader
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
-  include common/_mixin
 
   #main-about
     include common/_mainhead
@@ -13,8 +15,8 @@ html
     section.about-skill
       .container
         .container__left.container__about
-          .about-skill-h1_container
-            .about__skill__title 
+          .about__skill__title
+            //- .about__skill__title 
             +use('about_header','svg-about_header-dims','svg_title')
             .content__title_big Обо мне
           .img-container
@@ -60,6 +62,5 @@ html
           h1.contacts-info__header Контакты
           +nav('contacts__nav', {'Skype':'skype:my_skype', 'masnoy0alexey@gmal.com':'mailto:masnoy0alexey@gmail.com', '+79111915954':'+89111915954', 'г.Санкт-Петербург, Авангардная 47':'adress'})
         .contacts__map
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d76269.45907347549!2d30.236248575529917!3d59.84565529507137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1466570275785" width="1350" height="830" frameborder="0" style="border:0" scrolling="no" allowfullscreen></iframe>
-
+          
   include common/_footer-2

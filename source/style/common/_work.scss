@@ -1,9 +1,9 @@
 $col: 100% / 12;
 
 #main-work {
-  height: 2820px;
+  min-height: 100%;
   margin-bottom: -150px;
-  background: url("/assets/img/bg-work.jpg") center center no-repeat;
+  
   &:after {
     content: '';
     display: block;
@@ -11,22 +11,17 @@ $col: 100% / 12;
   }
 }
 
-.head__section {
-  height: 600px;
-  background: url("/assets/img/photo-bg2.jpg") top center no-repeat;;
-}
-
 .work {
   @extend %clearfix;
-  height: 750px;
   &__container-left {
     float: left;
     width: $col*4;
     margin-left: $col*2;
     @include tablet {
+      float: none;
       margin: 0;
       padding-left: 24px;
-      width: 50%;
+      width: 100%;
       box-sizing: border-box;
     }
   }
@@ -36,10 +31,11 @@ $col: 100% / 12;
   width: $col*4;
   margin-right: $col*2;
   @include tablet {
-      width: 50%;
-      padding-right: 62px;
+    float: none;
+      width: 100%;
+      padding-left: 24px;
       margin: 0;
-      box-sizing: boreder-box;
+      box-sizing: border-box;
     }
 }
   
@@ -49,30 +45,15 @@ $col: 100% / 12;
   width: 500px;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 /* ------ Icons, SVG -------*/
 
-.svg_title {
-  display: block;
-  margin: 0 auto;
-  opacity: 0.06;
-}
 
-.header__svg__bg {
-  fill: #fff;
-  left: 8%;
-  position: absolute;
-}
-
-.icon__arrow__down {
-  position: relative;
-  text-align: center;
-  top: 100px;
-}
 
 .icon__arrow__up {
+  margin-bottom: 150px;
   position: relative;
   text-align: center;
   top: 80px;
@@ -94,27 +75,125 @@ $col: 100% / 12;
 
 .container {
   @extend %clearfix;
-  &__left-slide_1 {
+  position: relative;
+  &__right-slides {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    @include tablet {
+      position: static;
+      float: none;
+      height: 100%;
+    }
+  }
+  &__left-slide_prev {
+    position: relative;
     float: left;
     width: 50%;
+    height: 100%;
+    overflow: hidden;
     img {
       width: 100%;
     }
   }
-  &__right-slide_2 {
-      float: left;
-      width: 50%;
+  &__left-slide_next {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
       img {
       width: 100%;
     }
   }
+  &__right-works {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 70%;
+    background-color: #efebe0;
+    @include tablet {
+      position: static;
+      padding: 5rem 0 2.5rem;
+    }
+
+  }
+  &__right-works__items {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    @include tablet {
+      position: static;
+    }
+  }
 }
 
+.container__left-slide_prev, .container__left-slide_next {
+  border: none;
+  cursor: pointer;
+  outline: 0;
+}
 
-.tell-about-me__container {
-  @extend %clearfix;
-  height: 100%;
-  margin-bottom: 60px;
+.slide.container__left-slide_prev-arrow, .slide.container__left-slide_next-arrow {
+  width: 44px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: #fff;
+  z-index: 1000;
+}
+
+.container__left-slide_prev:after {
+  background-image: url("/assets/img/portf_arrow_up.svg");
+    
+
+}
+
+.container__left-slide_next:after {
+  background-image: url("/assets/img/portf_arrow_down.svg");
+    
+}
+
+.slide__item {
+    left: 0;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+  &-img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  &-active {
+    top: 0;
+  }
+}
+
+.tell-about-me__container__content-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    background-color: #f0efe9;
+    display: none;
+  &.active {
+    display: inline-block;
+  }
 }
 
 .tell-about-me__container__left {
@@ -130,16 +209,26 @@ $col: 100% / 12;
 }
 
 
-
 .tell-about-me__container {
+    @extend %clearfix;
+    height: 100vh;
+    min-height: 650px;
+    position: relative;
+    background-color: #f0efe9;
+    margin-bottom: 60px;
+    @include tablet {
+      height: auto;
+    }
+
   &__content {
-  position: absolute;
-  width: 420px;
-  height: 250px;
-  margin-top: -125px;
-  margin-left: -210px;
-  top: 50%;
-  left: 50%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    @include tablet {
+      position: static;
+    }
   }
   &__left-title {
     @extend %h1;
@@ -170,22 +259,51 @@ $col: 100% / 12;
   }
 }
 
+.container__right-works__item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #efebe0;
+  img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    display: block;
 
-
-.svg-link-dims {
-  margin: 0 10px 0 20px;
+    }
+  &.active {
+      opacity: 1;
+      img {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    }
 }
 
+
 .tell-about-me__container__right {
-  float: right;
+  float: left;
   height: 100%;
   width: 50%;
-  // padding-top: 60px;
+  position: relative;
   background-color: #efebe0;
   @include tablet {
+    position: static;
     float: none;
     width: 100%;
-    padding: 100px 0 45px 0;
     }
   &-slides {
     display: inline-block;
@@ -196,17 +314,27 @@ $col: 100% / 12;
     }
 }
 
+.blur__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    background-size: 100% auto;
+    background: url("/assets/img/work-bg.png") no-repeat;
+}    
+@media screen and (max-width: 1600px) {
+  .blur__bg {
+    
+    } 
+  }
+
 
 
 .tell-about-me {
   @extend %clearfix;
-  height: 1150px;
-  // &__title {
-  //   width: 500px;
-  //   margin: 0 auto;
-  //   position: relative;
-  //   margin-bottom: 60px;
-  // }
+  position: relative;
   &__form {
     position: relative;
   }
@@ -238,17 +366,15 @@ $col: 100% / 12;
     width: 380px;
     height: 445px;
     border-radius: 7px;
-    background-color: rgba(255, 255, 255, 0.4s);
+    // background-color: rgba(255, 255, 255, 0.4s);
     overflow: hidden;
   }
   &__Blur-bg {
     width: 100%;
     height: 100%;
-    filter: blur(20px);
-    -webkit-filter: blur(20px);
-    background-image: url('/assets/img/bg-work.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
+    filter: blur(5px);
+    background-image: url('/assets/img/work-bg.png');
+    position: absolute;
   }
     
     &__btn-groop {

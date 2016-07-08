@@ -1,12 +1,15 @@
 doctype html
-html
+html(lang="ru-RU")
   include common/_head
   body
+    include common/_mixin
+    include common/_hide-menu
+    include common/_preloader
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
-  include common/_mixin
 
+  
   section.head__section__blog
       include common/_header
       .blog__selfbox-head
@@ -18,16 +21,16 @@ html
   section.blog-content
     aside.blog-aside
       ul.blog-aside__items
+        li.blog-aside__item
+          a(href="" data-id="0").blog-aside__link#item0  Самое важное в SASS
         li.blog-aside__item 
-          a(href="").blog-aside__link Самое важное в SASS
+          a(href="" data-id="1").blog-aside__link#item1 Приемы в верстке, без которых не обходится не один сайт.
         li.blog-aside__item 
-          a(href="").blog-aside__link Приемы в верстке, без которых не обходится не один сайт.
+          a(href="" data-id="2").blog-aside__link#item2 Самы необходимые набор Gulp плагинов.
         li.blog-aside__item 
-          a(href="").blog-aside__link Самы необходимые набор Gulp плагинов.
-        li.blog-aside__item 
-          a(href="").blog-aside__link Почему я выбрал Jade.
+          a(href="" data-id="3").blog-aside__link#item3 Почему я выбрал Jade.
     .blog_container
-      .container__post-1
+      .container__post
         h4.post__title Самое важное в SASS
         time.post__time 22 ноября 2016
         p.post__content 
@@ -46,7 +49,7 @@ html
           |соответствует насущным потребностям.
 
         img.post__img(src="../../assets/img/post-img.jpg", alt="")
-      .container__post-2
+      .container__post
         h4.post__title Приемы в верстке, без которых не обходится ни один сайт
         time.post__time 13 ноября 2016
         p.post__content 

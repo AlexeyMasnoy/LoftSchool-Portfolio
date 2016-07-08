@@ -1,11 +1,13 @@
 doctype html
-html
+html(lang="ru-RU")
   include common/_head
   body
+    include common/_mixin
+    include common/_hide-menu
+    include common/_preloader
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
-  include common/_mixin
 
   #main-work 
     include common/_mainhead
@@ -17,22 +19,71 @@ html
         
       .tell-about-me__container
         .tell-about-me__container__left
+          .container__right-works
+            .container__right-works__items
+              .container__right-works__item.active 
+                img(src="../assets/img/work.png", alt="Мои работы")
+              .container__right-works__item 
+                img(src="../assets/img/work.png", alt="Мои работы")
+              .container__right-works__item 
+                img(src="../assets/img/work.png", alt="Мои работы")
+              .container__right-works__item 
+                img(src="../assets/img/work.png", alt="Мои работы")
           .tell-about-me__container__content
-            h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
-            .tell-about-me__container__left-techbox
-              h4.tell-about-me__container__left-techbox-title html, css, javascript
-            a(href="http://loftschool.ru").tell-about-me__container__left-link
-              +use('link','svg-link-dims')
-              .tell-about-me__container__left-text Посмотреть сайт
+            .tell-about-me__container__content-item.active
+              h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
+              .tell-about-me__container__left-techbox
+                h4.tell-about-me__container__left-techbox-title html, css, javascript
+              a(href="http://loftschool.ru").tell-about-me__container__left-link
+                +use('link','svg-link-dims')
+                .tell-about-me__container__left-text Посмотреть сайт
+            .tell-about-me__container__content-item
+              h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
+              .tell-about-me__container__left-techbox
+                h4.tell-about-me__container__left-techbox-title html, css, javascript
+              a(href="http://loftschool.ru").tell-about-me__container__left-link
+                +use('link','svg-link-dims')
+                .tell-about-me__container__left-text Посмотреть сайт
+            .tell-about-me__container__content-item
+              h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
+              .tell-about-me__container__left-techbox
+                h4.tell-about-me__container__left-techbox-title html, css, javascript
+              a(href="http://loftschool.ru").tell-about-me__container__left-link
+                +use('link','svg-link-dims')
+                .tell-about-me__container__left-text Посмотреть сайт
+            .tell-about-me__container__content-item
+              h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
+              .tell-about-me__container__left-techbox
+                h4.tell-about-me__container__left-techbox-title html, css, javascript
+              a(href="http://loftschool.ru").tell-about-me__container__left-link
+                +use('link','svg-link-dims')
+                .tell-about-me__container__left-text Посмотреть сайт
         .tell-about-me__container__right
-          .container__right-works 
-            img(src="../../assets/img/work.png", alt="Мои работы")
           .container__right-slides
-            button.container__left-slide_1 
-              img.container__left-slide_1__img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
-            button.container__right-slide_2
-              img(src="../../assets/img/mockup-2.jpg", alt="Мои работы")
-    section.tell-about-me 
+            button.slide.container__left-slide_prev
+              .slide.container__left-slide_prev-arrow
+                +use('portf_arrow_up','svg-portf_arrow_up-dims')
+              .slide__item.slide__item-active
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+              .slide__item 
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+              .slide__item 
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+              .slide__item 
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+            button.slide.container__left-slide_next
+              .slide.container__left-slide_next-arrow
+                +use('portf_arrow_down','svg-portf_arrow_down-dims')
+              .slide__item
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+              .slide__item.slide__item-active
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+              .slide__item 
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+              .slide__item 
+                img.slide__item-img(src="../../assets/img/mockup-1.jpg", alt="Мои работы")
+    section.tell-about-me
+      .blur__bg 
       .work__title
         +use('about_header','svg-about_header-dims','svg_title')
         .content__title_big Что обо мне <br>говорят

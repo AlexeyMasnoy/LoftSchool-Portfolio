@@ -8,20 +8,18 @@ var Blur = (function () {
   };
 
   function _setUpListeners() {
-    $(document).ready(function() {
-      blur();
-    });
+    // $(document).ready(function() {
+    //   blur();
+    // });
 
-    $(window).resize(function() {
-      blur();
-    });
+    $(window).on('load resize', _blur);
   };
 
-  function blur() {
+  function _blur() {
     var 
-      imagewidth = $('#main-work').width(),
+      imagewidth = $('.blur__bg').width(),
       blur = $('.tell-about-me__Blur-bg'),
-      blurSection = $('#main-work'),
+      blurSection = $('.blur__bg'),
       positionTop = blurSection.offset().top - blur.offset().top,
       posLeft = blurSection.offset().left - blur.offset().left;
 

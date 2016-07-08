@@ -11,9 +11,9 @@ var Menu = (function() {
 
     function _setUpListners () {
       $('.menu__icon').on('click', _showMenu);
-    };
+    
       $('.hide-menu__icon-close').on('click', _hideMenu);
-
+    };
 
     function _showMenu (e) {
       e.preventDefault();
@@ -24,7 +24,7 @@ var Menu = (function() {
 
     function _hideMenu (e) {
       e.preventDefault();
-      menu_wrapper.css({
+      menu_wrapper.fadeOut('slow').css({
         display: 'none'
       })
     };
@@ -36,5 +36,7 @@ var Menu = (function() {
 })();
 
 Menu.init()
+
+
 
     

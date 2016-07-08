@@ -1,9 +1,9 @@
 #main-welcome
   .login-box
-   a.login(href="") Авторизоваться
-  .flip
-    
-      .selfbox
+   a.login#showlogin(href="") Авторизоваться
+  .flip-container.welcome__card
+    .flipper
+      .selfbox.card
         .selfbox-head
           .selfbox-head-img-container
             img.selfbox-head-img(src="../../assets/img/myphoto.jpg", alt="")
@@ -27,7 +27,7 @@
               
 
         +nav('selfbox-nav', {'Мои работы':'work.html', 'Обо мне':'about.html','Блог':'blog.html'})
-      .box
+      .box.card
         .selfbox-login
           h1.selfbox-login-text Авторизуйтесь
           form.login-form-man

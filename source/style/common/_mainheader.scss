@@ -1,0 +1,55 @@
+.head__section {
+  min-height: 650px;
+  overflow: hidden;
+  position: relative;
+ }
+
+ .head__svg__parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1276px;
+    .parallax__img {
+      display: block;
+      max-width: 100%;
+      min-width: 1200px;
+    }
+ }
+
+.selfbox-head-about {
+    @extend %selfbox-head;
+    margin-top: 70px;
+    .selfbox-head-text {
+      .selfbox-h1 { 
+        font-size: 35px;
+        color: #fff;
+        }
+      .selfbox-p {
+        font-size: 16px;
+        color: #fff;
+     }
+  }
+}
+
+.svg_title {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.06;
+}
+
+.header__svg__bg {
+  fill: #fff;
+  left: 8%;
+  position: absolute;
+}
+
+.icon__arrow__down {
+  position: relative;
+  text-align: center;
+  top: 100px;
+}
+
+.icon__arrow__link {
+  fill: #fff;
+}
