@@ -1,17 +1,10 @@
-$phone-width: 375px;
-$phoneL-width: 376px;
+$phone-width: 425px;
 $tablet-width: 426px;
 $desktop-width: 769px;
 $laptop-width: 1025px;
 
 @mixin phone {
-  @media (max-width: #{$phoneL-width}) {
-    @content;
-  }
-}
-
-@mixin phone-Large {
-  @media (min-width: #{$phoneL-width}) and (max-width: #{$tablet-width - 1px}) {
+  @media (max-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }

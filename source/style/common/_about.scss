@@ -27,11 +27,21 @@
 }
 
 .about-skill {
-  height: 960px;
   @extend %clearfix;
   @include tablet {
       height: 100%;
       }
+  &__title {
+  position: relative;
+  margin-bottom: 40px;
+  @include titles-dashes(340px);
+  @include tablet {
+      text-align: center;
+      }
+  @include phone {
+      font-size: 1.5rem;
+      }
+  }
   &__icons {
     @extend %roboto-medium-16;
     font-size: 28px;
@@ -54,6 +64,10 @@
     text-align: center;
   }
 }
+
+.about__skill__title {
+  position: relative;
+}
   
   .container {
     &__left {
@@ -67,6 +81,10 @@
         @include titles-dashes(330px);
 	       }
       @include tablet {
+      width: 100%;
+      float: none;
+      }
+      @include phone {
       width: 100%;
       float: none;
       }
@@ -107,26 +125,26 @@
       width: 100%;
       float: none;
       }
+      @include phone {
+      width: 100%;
+      float: none;
+      }
   
     }
   
 }
-
-.about__skill__title {
-  position: relative;
-  margin-bottom: 40px;
-  @include titles-dashes(340px);
-  }
 
 .container__about {
   margin: 0;
 }
 
 .contacts {
-  &__container {
-    height: 970px;
-    background: url("/assets/img/map.jpg") top center no-repeat;
-    position: relative; 
+  position: relative;
+  
+  &__map {
+    height: 100%;
+    min-height: 650px;
+    box-sizing: content-box;
   }
   &-info {
       @extend %selfbox;
