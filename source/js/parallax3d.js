@@ -18,9 +18,7 @@ var Parallax3d = (function() {
         mouseY = e.pageY,
         w = (window.innerWidth / 2) - mouseX,
         h = (window.innerHeight / 2) - mouseY,
-        layer = $('.parallax3d').find('.parallax__layer');
-        
-
+        layer = $('.parallax3d').find('.parallax__layer');      
     layer.map(function (key, value) {
 
         console.log(key, value);
@@ -30,6 +28,7 @@ var Parallax3d = (function() {
       $(value).css({
       'transform': 'translate3d(' + widthPos + 'px, ' + heightPos + 'px, 0)'
       })
+      // console.log(value);
     })
   };
 

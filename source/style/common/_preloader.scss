@@ -1,5 +1,4 @@
 .preloader__body {
-    display: none;
     position: fixed;
     z-index: 100;
     background-color: #1bc1a9;
@@ -20,22 +19,37 @@
 }
 .preloader__circle1 {
 	stroke-dasharray: 140px 1000px;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.75, 0.1, 0.75, 1);
+
 }
 .preloader__circle2 {
     stroke-dasharray: 100px 1000px;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.5, 0.1, 0.5, 1);
 }
 .preloader__circle3 {
     stroke-dasharray: 80px 1000px;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 circle {
     animation-name: rotate;
-    animation-timing-function: linear;
+    
     animation-iteration-count: infinite;
     transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 .preloader__value {
     text-align: center;

@@ -3,31 +3,31 @@
 // ==============================
 var Menu = (function() {
 
-  var menu_wrapper = $('.hide-menu-wrapper');
+  var hamburger = $('.hide-menu__hamburger');
 
     function init () {
       _setUpListners();
     };
 
     function _setUpListners () {
-      $('.menu__icon').on('click', _showMenu);
-    
-      $('.hide-menu__icon-close').on('click', _hideMenu);
+      hamburger.on('click', _toggleMenu);
+      // console.log('click');
+      // $('.hide-menu__icon-close').on('click', _hideMenu);
     };
 
-    function _showMenu (e) {
+    function _toggleMenu(e) {
       e.preventDefault();
-      menu_wrapper.css({
-        display: 'block'
-      })
+      $(this).toggleClass('open');
+      console.log($(this));
+      $('.hide-menu-wrapper').toggleClass('show');
     };
 
-    function _hideMenu (e) {
-      e.preventDefault();
-      menu_wrapper.fadeOut('slow').css({
-        display: 'none'
-      })
-    };
+    // function _hideMenu (e) {
+    //   e.preventDefault();
+    //   menu_wrapper.fadeOut('slow').css({
+    //     display: 'none'
+    //   })
+    // };
 
     return {
       init: init
