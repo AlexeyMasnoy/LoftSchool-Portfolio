@@ -315,6 +315,7 @@ $col: 100% / 12;
 }
 
 .blur__bg {
+  @extend %clearfix;
     position: absolute;
     top: 0;
     left: 0;
@@ -336,6 +337,7 @@ $col: 100% / 12;
 .tell-about-me {
   @extend %clearfix;
   position: relative;
+  overflow: hidden;
   &__form {
     position: relative;
   }

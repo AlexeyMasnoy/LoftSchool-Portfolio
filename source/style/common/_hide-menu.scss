@@ -10,14 +10,12 @@
 
 .show {
    display: block; 
-  }
-
-.display {
-  display: block;
 }
+  
+
 .hide-menu {
   display: block;
-  z-index: 200;
+  z-index: 300;
   position: fixed;
   left: 0;
   top: 0;
@@ -28,21 +26,23 @@
   min-height: 650px;
   background-color: rgba(0, 191, 165, 0.85);
   &__hamburger {
-    z-index: 300;
+    z-index: 200;
     float: right;
     width: 40px;
     height: 37px;
     position: relative;
-    // margin: 50px auto;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
+        &:hover {
+      color: #fff;
+    }
     &.open {
       .hide-menu__span:nth-child(1) {
         transform: rotate(-45deg);
         top: 29px;
         left: 8px;
-        // right: 8px;
+        background-color: #fff;
       }
       .hide-menu__span:nth-child(2) {
         width: 0%;
@@ -52,7 +52,7 @@
         transform: rotate(45deg);
         top: 0px;
         left: 8px;
-        // right: 8px;
+        background-color: #fff;
       }
     } 
   }
@@ -61,7 +61,7 @@
     position: absolute;
     height: 4px;
     width: 100%;
-    background: #fdfeff;
+    background: #c2d6d6;
     border-radius: 7px;
     opacity: 1;
     left: 0;
