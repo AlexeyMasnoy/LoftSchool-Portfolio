@@ -1,10 +1,14 @@
+
+/*
+ *  Главная страница и страница авторизации
+ */
+
 #main-welcome {
   @extend %main-container;
   min-height: 100%;
   overflow: hidden;
   position: relative;
   margin-bottom: -75px;
-  // background: url("/assets/img/photo-bg.jpg") top center no-repeat;
   &:after {
     height: 75px;
   }
@@ -13,34 +17,41 @@
   .login-box {
     position: absolute;
     right: 1.15rem;
-    width: 180px;
+    width: 11.25rem;
     height: 45px;
     top: 1.5rem;
     a.login {
       display: block; 
       height: auto;
       width: auto;      border-radius: 7px;
-      border: 2px solid #fff;
+      border: 1px solid #fff;
       position: relative;
       text-decoration: none;
       color: #fff;
       text-align: center;
-      line-height: 45px;
+      line-height: 2.8rem;
       font-family: 'Roboto-Medium', Arial, sans-serif;
-      font-size: 16px;
+      font-size: 1rem;
       &:hover{
         color: #00bfa5;
         background-color: #fff;
       }
+      @include phone {
+        font-size: 0.9rem;
+      }
     }
     @include phone {
+      width: 8.75rem;
+      height: 2.5rem;
       top: 0.8rem;
       right: 50%;
       transform: translate(50%, 0);
     }
   }
 
-// Флипп
+/*
+ *   Флип
+ */
 
 .welcome__card {
     width: 23.75rem;
@@ -53,10 +64,16 @@
       width: 21.75rem;
     }
     @include phone {
-      width: 21.5rem;
-      height: 28rem;
+      width: 18.5rem;;
+      height: 25rem;
+      margin-bottom: 2rem;
+      margin-top: 6rem;
     }
 }
+
+/*
+ *  Контейнер флипа
+ */
 
 .flipper {
   width: 100%;
@@ -82,7 +99,9 @@
   overflow: hidden;
 }
 
-// Лицевая сторона флипа
+/*
+ *  Лицевая сорона флипа
+ */
 
 .selfbox {
   position: absolute;
@@ -148,33 +167,51 @@
     }
   }
 
-
+/*
+ *  Навигация флипа
+ */
 
   .selfbox-nav {
-    width: 380px;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     .selfbox-nav-items {
-      
-      .selfbox-nav-item {
-        
-        display: inline-block;
+      display: flex;
+      .selfbox-nav-item { 
+        width: 100%;
+        display: flex;
         border-right: 2px solid #73cac3;
         margin-right: -5px;
         &:last-child {
           border: none;
         }
+        @include phone {
+            width: 100%;
+          }
 
         .selfbox-nav-link {
-          background: rgba(9, 176, 157, 0.6);
+          background: $nav-btn-color;
           display: block;
-          padding: 0 32px;
+          width: 100%;
+          text-align: center;
           line-height: 45px;
           height: 45px;
           text-decoration: none;
           color: #fff;
-          font-size: 16px;
+          font-size: 1rem;
           font-family: 'Roboto-Medium', Arial, sans-serif;
           &:hover {
             background: #26a69a;
+          }
+          @include tablet {
+
+          }
+          @include phone {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 0;
           }
         }
       }
@@ -183,7 +220,9 @@
   }
 }
 
-// Задняя сторона флипа
+/*
+ *  Задняя сорона флипа
+ */
 
 .box {
     position: absolute;
@@ -201,7 +240,7 @@
           .login-form-man {
             margin: 0 30px;
             width: 300px;
-
+            margin-bottom: 0.5rem;
             .login-input-log, .login-input-pas {
               width: 100%;
               height: 35px;
@@ -245,6 +284,10 @@
 
   }
 
+/*
+ *  Футер главной страницы
+ */
+
 .footer-1 {
   height: 75px;
   position: relative;
@@ -254,6 +297,30 @@
     line-height: 75px;
     font-size: 16px;
     font-family: 'Roboto-Light', Arial, sans-serif;
+    &_name, &_symbol, &_school{
+      display: inline-block;
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include tablet {
+        font-size: 1rem;
+      }
+      @include phone {
+        font-size: 0.9rem;
+      }
+    }
+    &_name, &_school {
+      @include phone {
+        display: block;
+        line-height: 2;
+      }
+    }
+    &_symbol {
+      @include phone {
+        display: none;
+      }
+    }
   }
 }
 

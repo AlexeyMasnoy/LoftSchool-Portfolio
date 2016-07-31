@@ -22,13 +22,13 @@ html(lang="ru-RU")
           .container__right-works
             .container__right-works__items
               .container__right-works__item.active 
-                img(src="../assets/img/work.png", alt="Мои работы")
+                img(src="../assets/img/work.png", data-number="0", alt="Мои работы")
               .container__right-works__item 
-                img(src="../assets/img/work.png", alt="Мои работы")
+                img(src="../assets/img/work.png", data-number="1", alt="Мои работы")
               .container__right-works__item 
-                img(src="../assets/img/work.png", alt="Мои работы")
+                img(src="../assets/img/work.png", data-number="2", alt="Мои работы")
               .container__right-works__item 
-                img(src="../assets/img/work.png", alt="Мои работы")
+                img(src="../assets/img/work.png", data-number="3", alt="Мои работы")
           .tell-about-me__container__content
             .tell-about-me__container__content-item.active
               h2.tell-about-me__container__left-title Сайт школы онлайн <br>образования
@@ -123,3 +123,5 @@ html(lang="ru-RU")
 
 
   include common/_footer-2
+
+include common/_scripts

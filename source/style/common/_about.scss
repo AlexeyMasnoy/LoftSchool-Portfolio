@@ -1,5 +1,6 @@
-
-// Mian-block
+/*
+ *  Страница Обо мне
+ */
 
 #main-about {
   min-height: 100%;
@@ -53,10 +54,19 @@
     padding: 0;
     list-style-type: none;
 
+    @include tablet {
+      text-align: center;
+    }
+
+    @include phone {
+      text-align: center;
+    }
+
   }
   &__item {
     position: relative;
     display: inline-block;
+    opacity: 0;
     width: 140px;
     height: 110px;
     border-radius: 50%;
@@ -74,6 +84,7 @@
       position: relative;
     	float: left;
     	width: 50%;
+      background-color: $light-grey;
     	.about-skill-h1 {
         @extend %h1;
     		font-size: 63px;
@@ -91,7 +102,8 @@
     }
 
   .img-container {
-    margin: 0 80px;
+    max-width: 29rem;
+    margin: 0 auto;
       img {
         width: 100%;
       }
@@ -106,6 +118,7 @@
       &-description {
       @extend %roboto-regular-16;
       margin: 0 37px 50px 37px;
+      line-height: 1.7rem;
     }
   }
 
@@ -115,6 +128,7 @@
       // margin-top: -300px;
       float: right;
       width: 50%;
+      background-color: $light-yellow;
       .about-skill-h1 {
         @extend %h1;
         font-size: 35px;
@@ -136,6 +150,7 @@
 
 .container__about {
   margin: 0;
+  height: 100%;
 }
 
 .contacts {
@@ -145,25 +160,64 @@
     height: 100%;
     min-height: 650px;
     box-sizing: content-box;
+    padding-bottom: 9.25rem;
+    @include tablet {
+      padding-bottom: 14.25rem;
+    }
+    @include phone {
+      padding-bottom: 14.25rem;
+    }
   }
   &-info {
       @extend %selfbox;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 148px;
+      background-color: rgba(252, 252, 252, 0.85);
+      border-radius: 5px;
+      margin: auto;
+      max-width: 23.75rem;
+      height: 18.125rem;
         &__header {
           @extend %h1;
           position: relative;
-          margin: 33px auto;
+          margin:  1.6rem auto;
           @include titles-dashes(270px);
         }
     }
+  &__nav-icon {
+    fill: #00bda3;
+    font-size: 2rem;
+    width: 2.4rem;
+    display: inline-block;
+  }
+  &__nav-link {
+    font-family: 'Roboto-Medium';
+    color: #455a64;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__nav-text {
+    font-family: 'Roboto-Medium';
+    color: #455a64;
+  }
   &__nav-items {
     margin-left: 40px;
   }
   &__nav-item {
-    margin-bottom: 25px;
+    padding-bottom: 1rem;
   }
 }
 
 /*-------SVG-------*/
+
+.svg_title {
+  width:auto;
+}
 
 .circle {
   &__svg {
@@ -179,7 +233,6 @@
     fill: none;
     stroke: $green;
     stroke-width: 20;
-    stroke-dasharray: 200 282.6;
     transform-origin: 50%;
     transition: all 1s;
     transform: rotate(-90deg);

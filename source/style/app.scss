@@ -73,10 +73,15 @@ html {
   zoom: 1; /* ie 6/7 */
 }
 
+/*-------- Media --------*/
+
+@import 'common/media';
+
 /*-------- variables --------*/
 
-$grey: #455a64;
-$green: rgba(0, 191, 165, 1);
+@import 'common/variables';
+
+
 
 %main-container {
   position: relative;
@@ -106,36 +111,84 @@ $green: rgba(0, 191, 165, 1);
 }
 
 %box-nav {
-    width: 380px;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     .selfbox-nav-items {
-      
+      display: flex;
       .selfbox-nav-item {
+        width: 100%;
         display: inline-block;
         border-right: 2px solid #73cac3;
         margin-right: -5px;
         &:last-child {
           border: none;
         }
+        @include phone {
+            width: 100%;
+          }
 
         .selfbox-nav-link {
-          background: rgba(38, 201, 178, 0.6);
+          background: $nav-btn-color;
           display: block;
-          padding: 0 32px;
+          width: 100%;
+          text-align: center;
           line-height: 45px;
           text-align: center;
           height: 45px;
           text-decoration: none;
           color: #fff;
-          font-size: 16px;
+          font-size: 1rem;
           font-family: 'Roboto-Medium', Arial, sans-serif;
           &:hover {
-            background: rgba(38, 166, 154, 0.8);
+            background: #26a69a;
+          }
+          @include tablet {
 
+          }
+          @include phone {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 0;
           }
         }
       }
     }
 }
+
+// %box-nav {
+//     width: 380px;
+//     .selfbox-nav-items {
+      
+//       .selfbox-nav-item {
+//         display: inline-block;
+//         border-right: 2px solid #73cac3;
+//         margin-right: -5px;
+//         &:last-child {
+//           border: none;
+//         }
+
+//         .selfbox-nav-link {
+//           background: rgba(38, 201, 178, 0.6);
+//           display: block;
+//           padding: 0 32px;
+//           line-height: 45px;
+//           text-align: center;
+//           height: 45px;
+//           text-decoration: none;
+//           color: #fff;
+//           font-size: 16px;
+//           font-family: 'Roboto-Medium', Arial, sans-serif;
+//           &:hover {
+//             background: rgba(38, 166, 154, 0.8);
+
+//           }
+//         }
+//       }
+//     }
+// }
 
 %selfbox-head {
     margin-bottom: 18px;
@@ -245,7 +298,6 @@ $green: rgba(0, 191, 165, 1);
 @import 'common/mixin';
 @import 'common/fonts';
 @import 'common/sprite';
-@import 'common/media';
 @import 'common/hide-menu';
 @import 'common/header';
 @import 'common/mainheader';

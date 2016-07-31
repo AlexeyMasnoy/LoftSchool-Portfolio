@@ -28,8 +28,8 @@
   &__hamburger {
     z-index: 200;
     float: right;
-    width: 40px;
-    height: 37px;
+    width: 2.5rem;
+    height: 2.3rem;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
@@ -78,6 +78,9 @@
     &:nth-child(3) {
       top: 30px;
       transform-origin: left center;
+    }
+    @include tablet {
+      height: 3px;
     }
   }
 

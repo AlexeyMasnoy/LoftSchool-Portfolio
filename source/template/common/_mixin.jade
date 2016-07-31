@@ -9,12 +9,22 @@ mixin nav (className, navigation)
       each link, nav in navigation
         li(class="#{className}-item")
           a(href="#{link}" class="#{className}-link")= nav
+
+mixin contacts-nav (className, navigation,icon)
+  ul(class="#{className}-items")
+    each link, nav in navigation 
+      li(class="#{className}-item")
+        span(class="#{className}-icon")
+          svg(role="img" class="#{c_iconName}" )
+            use(xlink:href="#{svg}##{iconName}")
+        span(class="#{className}-text")
+          a(href="#{link}" class="#{className}-link")= nav
             
 
 mixin svg-circle(className, text, skill)
   svg(class="#{className}__svg" viewBox="0 0 110 110" data-lvl="80")
     circle(class="#{className}__disc" cx="55" cy="55" r="45")
-    circle(class="#{className}__ring" cx="55" cy="55" r="45" style="stroke-dasharray: #{skill}, 282.6;")
+    circle(class="#{className}__ring" cx="55" cy="55" r="45" stroke-dasharray="0 1000" data-arc="#{skill}" data-circumference="282.6")
   span(class="#{className}__text") #{text}
 
             

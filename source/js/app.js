@@ -18,10 +18,11 @@
   if (window.location.pathname == '/work.html') {
 
     Blur.init();
+    Slider.init();
   }
 
   if (window.location.pathname == '/about.html') {
- 
+    AnimationSkills.init();
   }
 
 })();

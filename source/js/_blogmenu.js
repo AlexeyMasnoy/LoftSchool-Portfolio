@@ -21,9 +21,9 @@ var Scrollmenu = (function () {
     var scroll = $(window).scrollTop();
 
     if(scroll > 400) {
-      sidebar.css({position: "fixed", top: 50});
+      sidebar.css({position: "fixed", top: 60});
     }else {
-      sidebar.css({position: "relative", top: 0});
+      sidebar.css({position: "absolute", top: 460});
     }
 
     section.each(function(index, elem) {

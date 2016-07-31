@@ -9,5 +9,6 @@ module.exports = [
   './source/js/_parallax3d.js',
   './source/js/_preloader.js',
   './source/js/_slider.js',
+  './source/js/_animationSkills.js',
   './source/js/app.js'
 ];

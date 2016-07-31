@@ -30,21 +30,58 @@ $col: 100% / 12;
   margin-top: 70px;
 }
 
+.blog-aside:after {
+  @include tablet {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 45%;
+    left: -$col*3;
+    background-color: #00bfa5;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2)
+    }
+}
+
+.blog-slide {
+  transform: translate(0, 0);
+}
+
 .blog-aside {
   @extend %clearfix;
   float: left;
   width: $col*3;
   position: relative;
   margin-left: 45px;
+  @include tablet {
+    margin-left: 0;
+    position: fixed;
+    left: -$col*3;
+    height: 100%;
+    }
+  &.active {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100%;
+    width: 284px;
+    background-color: #00bfa5;
+    text-align: right;
+    padding-top: 0;
+    transform: translate(-284px, 0);
+    }
+  }
   &__item {
     position: relative;
     display: block;
     text-align: right;
-    vertical-align: middle;
-    // margin: 10px;
-    // &:hover {
-    ;
-    // }
+    vertical-align: middle; 
   }
   &__link {
   display: block;
@@ -54,12 +91,21 @@ $col: 100% / 12;
   color: $grey;
   line-height: 1.5;
   padding: 15px; 
-   
+  @include tablet {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.135rem;
+    line-height: 1.9rem;
+    }
   }
   &__active {
   color: #00bfa5;
   border-right: 3px solid #00bfa5;
-  margin-right: -3px
+  margin-right: -3px;
+  @include tablet {
+    color: #fff;
+    border-right: none;
+    margin-right: 0;
+    }
   }
 }
 

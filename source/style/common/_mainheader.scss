@@ -36,12 +36,17 @@
   display: block;
   margin: 0 auto;
   opacity: 0.06;
+  // width: 100%;
 }
 
 .header__svg__bg {
   fill: #fff;
   left: 8%;
+  right: 8%;
   position: absolute;
+  & svg {
+    width: 100%;
+  }
 }
 
 .icon__arrow__down {

@@ -1,24 +1,5 @@
 #main-welcome
   include _parallax3d
-  //- .parallax3d
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-1.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-2.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-3.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-4.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-5.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-6.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-7.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-8.jpg", alt="")
-  //-   .parallax__layer
-  //-     img(src="/assets/img/Layer-9.jpg", alt="")
   .login-box
     a.login#showlogin(href="") Авторизоваться
   .flip-container.welcome__card
@@ -65,4 +46,9 @@
 
         +nav('selfbox-nav', {'На главную':'index.html', 'Войти':'log-in.html'})
 footer.footer-1
-  p.copyright © Алексей Масной | создано с любовью в LoftSchool | 2016
+  .copyright 
+    span.copyright_name © Алексей Масной 
+    span.copyright_symbol | 
+    span.copyright_school создано с любовью в LoftSchool | 2016
+
+include _scripts

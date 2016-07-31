@@ -37,8 +37,6 @@ function _countImg() {
         imgs.push(path);
        }
      }
-      // console.log('Картинки: ' + imgs);
-      // console.log('Длина массива: ' + imgs.length);
   };
 };
 
@@ -56,7 +54,7 @@ function _onload() {
           loaded++;
           var percentLoader = _countPercent(loaded, imgs.length);
           _setPercent(percentLoader);
-          // console.log('Проценты и длинна массива: ' + loaded, imgs.length);  
+          
         });
     };
     
@@ -65,12 +63,11 @@ function _onload() {
     }            
             
     function _setPercent(percent) {
-      console.log('Проценты: ' + percent);
+
       $('.preloader__body').css('display', 'block');
       $('.preloader__value').text(percent + '%');
-      if(percent >= 100) {
+      if(percent = 100) {
         $('.preloader__body').css('display', 'none');
-        console.log('Проценты2: ' + percent);
       }
     }
 
